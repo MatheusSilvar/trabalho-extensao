@@ -44,9 +44,7 @@ Um assistente virtual inteligente desenvolvido para responder dúvidas frequente
 - **Python 3.8+** - Linguagem principal
 - **Pydantic AI** - Framework para agentes de IA
 - **Google Gemini** - Modelo de linguagem (gemini-2.0-flash)
-- **OpenAI** - Embeddings para RAG (opcional)
-- **Pinecone** - Banco vetorial para RAG (opcional)
-
+- 
 ### Banco de Dados
 - **MongoDB** - Armazenamento de usuários e conversas
 - **PyMongo** - Driver Python para MongoDB
@@ -113,9 +111,6 @@ MONGO_URL=mongodb://localhost:27017/
 # OU para MongoDB Atlas:
 # MONGO_URL=mongodb+srv://usuario:senha@cluster.mongodb.net/
 
-# Opcional: Para funcionalidades RAG
-OPENAI_API_KEY=sua_chave_openai_aqui
-PINECONE_API_KEY=sua_chave_pinecone_aqui
 ```
 
 ### 2. Como Obter as Chaves de API
@@ -182,7 +177,6 @@ projeto-integrador/
 ├── 💬 chatUI.py               # Interface do chat
 ├── 🤖 agent.py                # Agente de IA e lógica de conversação
 ├── 🗄️ banco.py                # Configuração do banco (simples)
-├── 🎯 rag.txt                 # Sistema RAG (opcional)
 ├── 🎨 UI.py                   # Componentes de UI (teste)
 ├── 📋 requirements.txt        # Dependências Python
 ├── ⚙️ .env.example            # Exemplo de configuração
@@ -307,30 +301,4 @@ export MONGO_URL="sua_url_producao"
 streamlit run gerenciador.py --server.port=8501 --server.address=0.0.0.0
 ```
 
-## 🤝 Contribuição
 
-1. Faça um fork do projeto
-2. Crie uma branch para sua feature (`git checkout -b feature/AmazingFeature`)
-3. Commit suas mudanças (`git commit -m 'Add some AmazingFeature'`)
-4. Push para a branch (`git push origin feature/AmazingFeature`)
-5. Abra um Pull Request
-
-## 📄 Licença
-
-Este projeto está sob a licença MIT. Veja o arquivo `LICENSE` para mais detalhes.
-
-## 👥 Equipe
-
-- **Desenvolvedor Principal**: [Seu Nome]
-- **Universidade**: PUC Campinas
-- **Projeto**: Integrador
-
-## 📞 Suporte
-
-Para dúvidas ou problemas:
-- 📧 Email: seu.email@puc-campinas.edu.br
-- 🌐 Site: [PUC Campinas](https://www.puc-campinas.edu.br/)
-
----
-
-⭐ **Se este projeto foi útil, considere dar uma estrela no GitHub!**
