@@ -44,7 +44,9 @@ Um assistente virtual inteligente desenvolvido para responder dúvidas frequente
 - **Python 3.8+** - Linguagem principal
 - **Pydantic AI** - Framework para agentes de IA
 - **Google Gemini** - Modelo de linguagem (gemini-2.0-flash)
-- 
+- **NetworkX** - Biblioteca de grafos
+- **Matplotlib** - Biblioteca de plot de gráficos
+  
 ### Banco de Dados
 - **MongoDB** - Armazenamento de usuários e conversas
 - **PyMongo** - Driver Python para MongoDB
@@ -116,7 +118,7 @@ MONGO_URL=mongodb://localhost:27017/
 ### 2. Como Obter as Chaves de API
 
 #### Google Gemini API Key
-1. Acesse [Google AI Studio](https://makersuite.google.com/app/apikey)
+1. Acesse [Google AI Studio](https://aistudio.google.com/app/apikey)
 2. Faça login com sua conta Google
 3. Clique em "Create API Key"
 4. Copie a chave gerada
@@ -138,9 +140,8 @@ sudo systemctl start mongodb
 1. Acesse [MongoDB Atlas](https://www.mongodb.com/atlas)
 2. Crie uma conta gratuita
 3. Crie um cluster
-4. Configure acesso de rede (0.0.0.0/0 para desenvolvimento)
-5. Crie um usuário de banco de dados
-6. Copie a string de conexão
+4. Crie um usuário de banco de dados
+5. Copie a string de conexão
 
 ### 3. Configurar MongoDB
 
