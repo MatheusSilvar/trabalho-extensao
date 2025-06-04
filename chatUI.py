@@ -6,6 +6,7 @@ from datetime import datetime
 import pymongo
 import asyncio
 from agent import ConversaComMemoria, setup_agent  # Importar a nova classe e função
+from grafos import plotar_grafo_conversa, obter_estatisticas_conversa  # Importar funções do grafo
 
 # Carregar variáveis de ambiente
 load_dotenv()
@@ -288,12 +289,24 @@ current_messages = current_chat.get("messages", [])
 if current_chat:
     st.write(f"💬 **{current_chat['name']}**")
     
-    # Opção para renomear chat
-    with st.expander("✏️ Renomear conversa"):
-        new_name = st.text_input("Novo nome:", value=current_chat['name'])
-        if st.button("Salvar nome"):
-            st.session_state.chats[st.session_state.current_chat_id]["name"] = new_name
-            st.rerun()
+    # Linha com opções do chat
+    col1, col2 = st.columns([3, 1])
+    
+    with col1:
+        # Opção para renomear chat
+        with st.expander("✏️ Renomear conversa"):
+            new_name = st.text_input("Novo nome:", value=current_chat['name'])
+            if st.button("Salvar nome"):
+                st.session_state.chats[st.session_state.current_chat_id]["name"] = new_name
+                st.rerun()
+    
+    with col2:
+        # Botão para mostrar grafo
+        if st.button("📊 Mostrar Grafo", use_container_width=True):
+            st.info("Funcionalidade do grafo será implementada aqui!")
+            plotar_grafo_conversa(current_messages)
+            # Aqui você pode adicionar a lógica para mostrar o grafo
+            # Por exemplo: st.session_state.show_graph = True
 
 st.write("Olá! Sou seu assistente. Como posso ajudar?")
 
